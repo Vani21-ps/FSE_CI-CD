@@ -9,5 +9,5 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-      - name: Print name
-        run: echo "Vani"
+      - name: list file
+        run: ls
