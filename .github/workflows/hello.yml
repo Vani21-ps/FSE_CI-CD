@@ -10,8 +10,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: list file
-        run: ls
+        run:  ls
       - name: setup node
-        run:  actions/setup-node@v2
+        uses: actions/setup-node@v2
       - name: version check
         run:  node -v
