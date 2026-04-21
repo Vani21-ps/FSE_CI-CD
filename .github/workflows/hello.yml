@@ -15,3 +15,5 @@ jobs:
         uses: actions/setup-node@v2
       - name: version check
         run:  node -v
+      - name: starting test
+        run:  npm run test
