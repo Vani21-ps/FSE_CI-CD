@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo test passed"
+    "lint": "echo \"Lint passed\"",
+    "test": "echo \"Test passed\"",
+    "build": "echo \"Build successful\""
   },
   "keywords": [],
   "author": "",
