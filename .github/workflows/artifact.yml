@@ -1,0 +1,26 @@
+name: artifact
+on: push
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: create a file
+        run: echo "hii" > file.txt
+      - name: upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-file
+          path: file.txt
+  job2:
+    runs-on: ubuntu-latest
+    needs: job1
+    steps:
+      - name: download artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: my-file
+
+      - name: read file.txt
+        run: cat file.txt
+
